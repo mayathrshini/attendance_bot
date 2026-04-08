@@ -1,6 +1,5 @@
 import os
 import requests
-import schedule
 import time
 from playwright.sync_api import sync_playwright
 
@@ -46,11 +45,8 @@ def send_to_telegram():
         )
     print(r.json())
 
-# Schedule daily at 8:00 AM
-schedule.every().day.at("08:00").do(send_to_telegram)
+
 
 if __name__ == "__main__":
     send_to_telegram()   # run once immediately to test
-    while True:
-        schedule.run_pending()
-        time.sleep(60)
+   
