@@ -3,10 +3,12 @@ import requests
 import time
 from playwright.sync_api import sync_playwright
 
-BOT_TOKEN = "8707842728:AAHEpqxrdeM6fs9rUE7mN_kf8yzTWmolB0Y"
-CHAT_ID   = 7954376979          # your chat ID (number, no quotes)
-USERNAME  = "2117250070369"
-PASSWORD  = "9344715156"
+BOT_TOKEN = os.environ["BOT_TOKEN"]
+CHAT_ID = int(os.environ["CHAT_ID"])
+USERNAME = os.environ["USERNAME"]
+PASSWORD = os.environ["PASSWORD"]
+
+SCREENSHOT_PATH = "attendance.png"
 SCREENSHOT_PATH = r"D:\attendance\attendance.png"
 
 def capture_attendance():
