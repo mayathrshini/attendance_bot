@@ -2,7 +2,7 @@ name: Daily Attendance
 
 on:
   schedule:
-    - cron: '30 10 * * *'   # 3:30 PM IST
+    - cron: '50 10 * * *'   # 3:30 PM IST
   workflow_dispatch:
 
 jobs:
